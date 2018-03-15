@@ -18,8 +18,7 @@
         </ul>
       </nav>
       <div class="shopping-basket">
-         <!-- Здесь будет форма -->
-        <div class="basket-link">Корзина</div>
+        <div class="basket-link"><a class="basket-link" href="basket.html">Корзина</a></div>
         <div><img src="/img/basket.png" width="15" height="15" alt="Картинка корзинки"></div>
       </div>
     </header>
@@ -27,7 +26,7 @@
       <h1 class="visually-hidden">Компания "Нердс" Краснодар</h1>
       <section class="slider">
         <h2 class="visually-hidden">Подход к работе в компании "Нердс"</h2>
-        <div class="slider">          
+        <div class="slider"><!--Слайдер-1 -->
           <div class="slider-left-part">
               <div>
                 <p><span>Долго, дорого, скрупулезно.</span>Математически выверенный дизайн для вашего сайта или мобильного приложения.</p>
@@ -41,6 +40,39 @@
               <img src="img/index-slide1.png" width="698" height="413" alt="Изображение первого слайда">
             </div>
           </div>
+        </div>
+        <div class="slider"><!--Слайдер-2 -->
+          <div class="slider-left-part">
+              <div>
+                <p><span>Любим математику как никто другой</span>Никакого креатива, только математические формулы для расчета идеальных пропорций.</p>
+              </div>
+              <div>
+                  <a class="button" href="article.html">Узнать больше</a>
+              </div>
+          </div>
+          <div class="slider-right-part">
+            <div class="slider-right-part-picture">
+              <img src="img/index-slide2.png" width="698" height="413" alt="Изображение второго слайда">
+            </div>
+          </div>
+        </div>
+        <div class="slider"><!--Слайдер-3 -->
+          <div class="slider-left-part">
+              <div>
+                <p><span>Только ночь, только хардкор</span>Работаем днем, как все? Мы против этого. Ближе к полуночи работа только начинается.</p>
+              </div>
+              <div>
+                  <a class="button" href="article.html">Узнать больше</a>
+              </div>
+          </div>
+          <div class="slider-right-part">
+            <div class="slider-right-part-picture">
+              <img src="img/index-slide3.png" width="698" height="413" alt="Изображение третьего слайда">
+            </div>
+          </div>
+        </div>
+        <div class="slider-indicator">
+          <img class="active-button" src="img/" alt="">
         </div>
       </section>
       <section class="service">        
@@ -103,7 +135,7 @@
       <section class="advertising">
         <h2 class="visually-hidden">Реклама на сайте компании Нердс</h2>
         <div>
-          <a class="advertising-blok blok1" href="#">
+          <a class="advertising-blok blok1" href="https://htmlacademy.ru/intensive/htmlcss">
             <img src="img/logo-1.png" width="199" height="68" alt="Логотип HTML academy">
           </a>
         </div>
@@ -129,16 +161,40 @@
         <h2 class="visually-hidden">Контактные данные компании "Нердс"</h2>
         <strong>Nerds design studio</strong>
         <p>191186, Санк-петербург,<br>ул. Б. Конюшенная, д.19/8<br><br>тел. +7(812)275-75-75</p>
-        <!-- Здесь будет форма-->
-        <a class="backform-button" href="#">Напишите нам</a>
+          <!-- Форма "напишите нам" -->
+          <form class="feedback-form" action="#url" method="post">
+            <h2>Напишите нам</h2>
+            <p class="feedback-item">
+              <label for="feedback-name">Ваше имя:</label>
+              <input id="feedback-name" type="text" name="name" value="" placeholder="Имя Фамилия">
+            </p>
+            <p class="feedback-item">
+              <label for="feedback-mail">Ваш email:</label>
+              <input id="feedback-mail" type="email" name="mail" value="" placeholder="email@example.com">
+            </p>
+            <p class="feedback-item">
+              <label for="feedback-message">Текст письма:</label>
+              <textarea id="feedback-message" rows="4" cols="25" name="message" placeholder="В свободной форме"></textarea>
+            </p>
+            <button class="button" type="submit">Отправить</button>
+            <button class="modal-close" type="button">
+              <img src="img/close-cross.svg" width="21" height="21" alt="Закрыть форму">Закрыть
+            </button>
+          </form>
+          <!-- Форма "напишите нам" -->
       </section>
       <section class="footer-map">
-        <h2 class="visually-hidden">Карта расположения офиса компании "Нередс"</h2>
-        <div class="footer-img-map"></div>
+        <h2 class="visually-hidden">Как к нам добраться</h2>
+        <div class="footer-img-map">
+          <!--Временный вариант -->
+          <p><!--Правильно в р или в div?-->
+            <img src="img/map-marker.jpg" width="1440" height="416" alt="Офиса компании Нередс: Санк-петербург, ул. Б. Конюшенная, д.19/8">
+          </p>
+        </div>
       </section>            
       <div class="footer-social">
         <p class="b">Давайте дружить, это выгодно!</p>
-        <p>Скидка 10% для друзей из социальных сетей</p>        
+        <p>Скидка 10% для друзей из социальных сетей</p> 
         <ul>
           <li><a class="social-button" href="#">Вконтакте</a></li>
           <li><a class="social-button" href="#">Фейсбук</a></li>

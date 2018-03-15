@@ -18,8 +18,7 @@
         </ul>
       </nav>
       <div class="shopping-basket">
-         <!-- Здесь будет форма -->
-        <div class="basket-link">Корзина</div>
+        <div class="basket-link"><a class="basket-link" href="basket.html">Корзина</a></div>
         <div><img src="/img/basket.png" width="15" height="15" alt="Картинка корзинки"></div>
       </div>
     </header>
@@ -28,12 +27,107 @@
       <div class="column-headings">
         <div>Стоимость:</div>
         <div>Сортировать:</div>
-        <!--Форма по сортировке товаров по цене -->
-        <div>По цене</div>
+        <div class="sequencer">
+  <!-- Не хватает знаний )) возможно тут (ниже filter-sequencer) нужно было инпутами трудиться (тогда траблы с моментальной отправкой формы по клику. Сделал на батонах, тоже есть сложности с пониманием до конца, но, кажется, что СиЭсСэтить в таком виде будет легче-->
+        <h2 class="visually-hidden">Фильтр продуктов по: цене, типу, названию; по убыванию-возрастанию</h2>
+        <form class="filter-sequencer" method="get" action="#">
+          <fieldset>
+            <ul>
+              <li class="filter-option-sequencer">
+                <button class="button-price">
+                По цене
+                </button>
+              </li>
+              <li class="filter-option-sequencer">
+               <button class="button-type">
+                По типу
+                </button>
+              </li>
+              <li class="filter-option-sequencer">
+                <button class="button-appointment">
+                По назначению
+                </button>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset>
+            <ul>
+              <li class="filter-option-sequencer">
+                <button class="button-appointment">
+                  <img src="img/icon-down-dir.svg" width="11" height="10" alt="По убыванию">
+                </button>
+              </li>
+              <li class="filter-option-sequencer">
+                <button class="button-appointment">
+                  <img src="img/icon-up-dir.svg" width="11" height="10" alt="По возрастанию">
+                </button>
+              </li>
+            </ul>
+          </fieldset>
+        </form>
+      </div>
       </div>
       <section class="filters">
         <h2 class="visually-hidden">Фильтр товаров</h2>
-        <!-- Здесь будет форма -->
+        <form class="filter" method="get" action="https://#">
+          <div class="filter-value">
+            <div class="filter-value-slider">
+              <label class="visually-hidden" for="value-count">Стоимость</label>
+              <input type="range" id="value-count" name="value-count" min="1" max="15000" step="1">
+            </div>
+            <div class="filter-value-from">
+              <label for="from">От</label> 
+              <input type="number" min="1" max="15000" id="from" name="from" value="0">
+            </div>
+            <div class="filter-value-till">
+              <label for="till">До</label> 
+              <input type="number" min="1000" max="15000" id="till" name="till" value="15000">
+            </div>
+          </div>
+          <fieldset>
+            <legend>Сетка:</legend>
+            <ul>
+              <li class="filter-option">
+                <input class="visually-hidden filter-input filter-input-radio" type="radio" name="product-group" value="adaptiving" id="filter-adaptive" checked>
+                <label for="filter-adaptive">Адаптивная</label>
+              </li>
+              <li class="filter-option">
+                <input class="visually-hidden filter-input filter-input-radio" type="radio" name="product-group" value="fixed" id="filter-fixed">
+                <label for="filter-fixed">Фиксированная</label>
+              </li>
+              <li class="filter-option">
+                <input class="visually-hidden filter-input filter-input-radio" type="radio" name="product-group" value="rubber" id="filter-rubber">
+                <label for="filter-rubber">Резиновая</label>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset>
+            <legend>Особенности:</legend>
+            <ul>
+              <li class="filter-option">
+                <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="slider" id="filter-slider" checked>
+                <label for="filter-slider">Слайдер</label>
+              </li>
+              <li class="filter-option">
+                <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="benefit-block" id="filter-benefit-block">
+                <label for="filter-benefit-block">Блок преимуществ</label>
+              </li>
+              <li class="filter-option">
+                <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="news" id="filter-news">
+                <label for="filter-news">Новости</label>
+              </li>
+              <li class="filter-option">
+                <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="gallery" id="filter-gallery">
+                <label for="filter-gallery">Галерея</label>
+              </li>
+              <li class="filter-option">
+                <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="basket" id="filter-basket" checked>
+                <label for="filter-basket">Корзина</label>
+              </li>
+            </ul>
+          </fieldset>
+          <button type="submit" class="filter-button button">Показать</button>
+        </form>
       </section>
       <section class="catalog">
         <h2 class="visualy-hidden">Сайты и приложения предлагаемые компанией "Нердс"</h2>
@@ -72,7 +166,7 @@
             </ul>
           </div>
           <div class="catalog-item">
-            <a href="#Вязанные картинки">
+            <a href="#Mishka">
               <img src="img/img-mishka.jpg" width="360" height="576" alt="Вид странички - Вязанные картинки">
             </a>
             <!--Выпадающий список - заявка-->
@@ -109,7 +203,7 @@
           <li class="pagination"><a href="#">1</a></li>
           <li class="pagination pagination-current"><a>2</a></li>
           <li class="pagination"><a href="#">3</a></li>
-          <li class="pagination"><a href="#">4</a></li>
+          <li class="pagination"><a href="#">Следующая</a></li>
         </ul>
       </section>
     </main>
@@ -118,16 +212,40 @@
         <h2 class="visually-hidden">Контактные данные компании "Нердс"</h2>
         <strong>Nerds design studio</strong>
         <p>191186, Санк-петербург,<br>ул. Б. Конюшенная, д.19/8<br><br>тел. +7(812)275-75-75</p>
-        <!-- Здесь будет форма-->
-        <a class="backform-button" href="#">Напишите нам</a>
+          <!-- Форма "напишите нам" -->
+          <form class="feedback-form" action="#url" method="post">
+            <h2>Напишите нам</h2>
+            <p class="feedback-item">
+              <label for="feedback-name">Ваше имя:</label>
+              <input id="feedback-name" type="text" name="name" value="" placeholder="Имя Фамилия">
+            </p>
+            <p class="feedback-item">
+              <label for="feedback-mail">Ваш email:</label>
+              <input id="feedback-mail" type="email" name="mail" value="" placeholder="email@example.com">
+            </p>
+            <p class="feedback-item">
+              <label for="feedback-message">Текст письма:</label>
+              <textarea id="feedback-message" rows="4" cols="25" name="message" placeholder="В свободной форме"></textarea>
+            </p>
+            <button class="button" type="submit">Отправить</button>
+            <button class="modal-close" type="button">
+              <img src="img/close-cross.svg" width="21" height="21" alt="Закрыть форму">Закрыть
+            </button>
+          </form>
+          <!-- Форма "напишите нам" -->
       </section>
       <section class="footer-map">
-        <h2 class="visually-hidden">Карта расположения офиса компании "Нередс"</h2>
-        <div class="footer-img-map"></div>
+        <h2 class="visually-hidden">Как к нам добраться</h2>
+        <div class="footer-img-map">
+          <!--Временный вариант -->
+          <p><!--Правильно в р или в div?-->
+            <img src="img/map-marker.jpg" width="1440" height="416" alt="Офиса компании Нередс: Санк-петербург, ул. Б. Конюшенная, д.19/8">
+          </p>
+        </div>
       </section>            
       <div class="footer-social">
         <p class="b">Давайте дружить, это выгодно!</p>
-        <p>Скидка 10% для друзей из социальных сетей</p>        
+        <p>Скидка 10% для друзей из социальных сетей</p> 
         <ul>
           <li><a class="social-button" href="#">Вконтакте</a></li>
           <li><a class="social-button" href="#">Фейсбук</a></li>
