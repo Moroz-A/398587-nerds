@@ -2,32 +2,34 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>Каталог продуктов дизайн-студии "Нердс"</title>
+    <title>Дизайн-студия "Нердс" Краснодар</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
   </head>
   <body>
-    <header class="header">
-      <nav class="navigation">
-        <a class="header-logo" href="index.html">
-          <img src="//index-logo.svg" alt="Логотип компании «Нердс»">
-        </a>
-        <ul class="site-navigation">
-          <li><a href="studio.html">Студия</a></li>
-          <li><a href="clients.html">Клиенты</a></li>
-          <li class="site-navigation-current"><a href="catalog.html">Магазин</a></li>
-          <li><a href="contacts.html">Контакты</a></li>
-        </ul>
-      </nav>
-      <div class="shopping-basket">
-        <div class="basket-link"><a href="basket.html">Корзина</a></div>
+    <header class="header catalog-header">
+      <div class="header-block container clearfix">
+        <figure class="header-logo">
+          <a href="index.html">
+            <img src="img/nerds-logo.svg"  width="160" height="65" alt="Логотип компании «Нердс»">
+          </a>
+        </figure>
+        <nav class="site-navigation">
+          <a href="index.html">Студия</a>
+          <a href="#">Клиенты</a>
+          <a href="catalog.html" class="current">Магазин</a>
+          <a href="#">Контакты</a>
+          <a href="#" class="basket">корзина</a>
+        </nav>
       </div>
+      <h1 class="page-title container">Магазин готовых шаблонов</h1>
     </header>
     <main class="container">
-    <h1 class="page-title">Магазин готовых шаблонов</h1>
       <div class="column-headings">
-        <div>Стоимость:</div>
-        <div>Сортировать:</div>
+        <div class="label">Стоимость:</div>
+        <div class="label">Сортировать:</div>
         <div class="sequencer">
-  <!--  тут жду инфы от тебя, как это делать, из последнего разговора - возможно это будут ссылки, img-ы убрал-->
           <h2 class="visually-hidden">Фильтр продуктов по: цене, типу, названию; по убыванию-возрастанию</h2>
           <form class="filter-sequencer" method="get" action="#">
             <fieldset>
@@ -79,7 +81,7 @@
               <input type="number" min="1000" max="15000" id="till" name="till" value="15000">
             </div>
           </div>
-          <fieldset>
+          <fieldset class="filter-type">
             <legend>Сетка:</legend>
             <ul>
               <li class="filter-option">
@@ -96,7 +98,7 @@
               </li>
             </ul>
           </fieldset>
-          <fieldset>
+          <fieldset class="filter-extra">
             <legend>Особенности:</legend>
             <ul>
               <li class="filter-option">
@@ -121,11 +123,11 @@
               </li>
             </ul>
           </fieldset>
-          <button type="submit" class="filter-button button">Показать</button>
+          <button type="submit" class="filter-button">Показать</button>
         </form>
       </section>
       <section class="catalog">
-        <h2 class="visualy-hidden">Сайты и приложения предлагаемые компанией "Нердс"</h2>
+        <h2 class="visually-hidden">Сайты и приложения предлагаемые компанией "Нердс"</h2>
         <div class="catalog-list">
           <div class="catalog-item">
             <a href="#Седона">
@@ -133,9 +135,9 @@
             </a>
             <!--Выпадающий список - заявка-->
             <ul class="visible-in-hovard">
-              <li class="item-title"><p></p></li>
-              <li class="item-description"><p></p></li>
-              <li class="button-add-to-basket"><button></button></li>
+              <li class="item-title">Sedona</li>
+              <li class="item-description">Информационный сайт<br>для туристов</li>
+              <li class="button-add-to-basket"><button class="button">9&#160;900&#160;руб</button></li>
             </ul>
           </div>
           <div class="catalog-item">
@@ -144,9 +146,9 @@
             </a>
             <!--Выпадающий список - заявка-->
             <ul class="visible-in-hovard">
-              <li class="item-title"><p></p></li>
-              <li class="item-description"><p></p></li>
-              <li class="button-add-to-basket"><button></button></li>
+              <li class="item-title">Sedona</li>
+              <li class="item-description">Информационный сайт<br>для туристов</li>
+              <li class="button-add-to-basket"><button class="button">9&#160;900&#160;руб</button></li>
             </ul>
           </div>
           <div class="catalog-item">
@@ -155,9 +157,9 @@
             </a>
             <!--Выпадающий список - заявка-->
             <ul class="visible-in-hovard">
-              <li class="item-title"><p></p></li>
-              <li class="item-description"><p></p></li>
-              <li class="button-add-to-basket"><button></button></li>
+              <li class="item-title">Sedona</li>
+              <li class="item-description">Информационный сайт<br>для туристов</li>
+              <li class="button-add-to-basket"><button class="button">9&#160;900&#160;руб</button></li>
             </ul>
           </div>
           <div class="catalog-item">
@@ -166,9 +168,9 @@
             </a>
             <!--Выпадающий список - заявка-->
             <ul class="visible-in-hovard">
-              <li class="item-title"><p></p></li>
-              <li class="item-description"><p></p></li>
-              <li class="button-add-to-basket"><button></button></li>
+              <li class="item-title">Sedona</li>
+              <li class="item-description">Информационный сайт<br>для туристов</li>
+              <li class="button-add-to-basket"><button class="button">9&#160;900&#160;руб</button></li>
             </ul>
           </div>
           <div class="catalog-item">
@@ -177,9 +179,9 @@
             </a>
             <!--Выпадающий список - заявка-->
             <ul class="visible-in-hovard">
-              <li class="item-title"><p></p></li>
-              <li class="item-description"><p></p></li>
-              <li class="button-add-to-basket"><button></button></li>
+              <li class="item-title">Sedona</li>
+              <li class="item-description">Информационный сайт<br>для туристов</li>
+              <li class="button-add-to-basket"><button class="button">9&#160;900&#160;руб</button></li>
             </ul>
           </div>
           <div class="catalog-item">
@@ -188,13 +190,13 @@
             </a>
             <!--Выпадающий список - заявка-->
             <ul class="visible-in-hovard">
-              <li class="item-title"><p></p></li>
-              <li class="item-description"><p></p></li>
-              <li class="button-add-to-basket"><button></button></li>
+              <li class="item-title">Sedona</li>
+              <li class="item-description">Информационный сайт<br>для туристов</li>
+              <li class="button-add-to-basket"><button class="button">9&#160;900&#160;руб</button></li>
             </ul>
           </div>
         </div>
-        <ul class="pagination">
+        <ul class="catalog-pagination">
           <li class="pagination"><a href="#">1</a></li>
           <li class="pagination pagination-current"><a>2</a></li>
           <li class="pagination"><a href="#">3</a></li>
@@ -247,3 +249,6 @@
     </footer>
   </body>
 </html>
+
+
+

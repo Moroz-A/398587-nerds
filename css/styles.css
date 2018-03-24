@@ -1,64 +1,228 @@
 @charset "utf-8";
-/* CSS Document */
+@font-face {
+    font-family: RobotoRegular;
+    src: url("../fonts/roboto.woff2") format("woff2"), url("../fonts/roboto.woff") format("woff"),
+    url("../fonts/Roboto-Regular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: RobotoMedium;
+    src: url("../fonts/robotomedium.woff2") format("woff2"), url("../fonts/robotomedium.woff") format("woff"),
+    url("../fonts/Roboto-Medium.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: RobotoBold;
+    src: url("../fonts/robotobold.woff2") format("woff2"), url("../fonts/robotobold.woff") format("woff"),
+    url("../fonts/Roboto-Bold.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* ГЛОБАЛЬНЫЕ НАСТРОЙКИ */
 
 body {
   margin: 0;
   padding: 0;
   min-width: 1200px;
-
-  font-family: Roboto, "Trebuchet MS", Arial, sans-serif;
-  font-size: 16px;
-  line-height: 24px;
-  font-weight: 500;
   text-transform: uppercase;
   background-color: #FFFFFF;
-  color: #283136;
+  color: #000000;
 }
 .visually-hidden {
   position: absolute;
   width: 1px;
   height: 1px;
-/*
   margin: -1px;
   border: 0;
   padding: 0;
-*/
   clip: rect(0, 0, 0, 0);  
 }
+
 a {
   text-decoration: none;
 }
+
 .navigation {
-  line-height: 30px;
   background-color: #EEEEEE;
 }
-.site-navigation,
+.navigation,
 .slider-list,
 .self-advertising-leftcolumn,
 .self-advertising-rightcolumn-text ul,
-.footer-social ul {
+.footer-social ul,
+.filter-sequencer ul,
+.filter-type ul,
+.filter-extra ul,
+.visible-in-hovard,
+.catalog-pagination {
   list-style: none;
 }
 .header-logo,
-.site-navigation a,
-.basket-link a {
+.navigation a,
+.basket a {
   color: #000000;
 }
-.site-navigation a:hover,
-.site-navigation a:focus,
-.basket-link a:hover,
-.basket-link a:focus {
+.navigation a:hover,
+.navigation a:focus,
+.basket a:hover,
+.basket a:focus {
   color: #fb565a;
 }
-.slider {
-  position: relative;
-  background-color: #EEEEEE;
-}
+
 .container {
   width: 1200px;
   margin: auto;
   padding: 0 20px;
   box-sizing: border-box;
+}
+
+/* ГЛОБАЛЬНЫЕ НАСТРОЙКИ */
+/* ШРИФТЫ */
+
+.site-navigation a,
+.filter-button {
+  font-family: RobotoMedium, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 500;
+  color: #000000;
+}
+h1,
+.slider-item h3 {
+  font-family: RobotoMedium, Arial, sans-serif;
+  font-size: 55px;
+  line-height: 55px;
+  font-weight: 500;
+  color: #000000;
+  text-transform: none;
+}
+.slider-item p,
+.slogan,
+.self-advertising-leftcolumn p,
+.self-advertising-leftcolumn li {
+  font-family: RobotoRegular, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  color: #283136;
+  text-transform: none;
+}
+.button,
+.pagination-item a {
+  font-family: RobotoMedium, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 500;
+  color: #ffffff;
+}
+.offered-service h3 {
+  font-family: RobotoBold, Arial, sans-serif;
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 700;
+  color: #283136;
+}
+.self-advertising-leftcolumn h3,
+.feedback-form h2 {
+  font-family: RobotoMedium, Arial, sans-serif;
+  font-size: 45px;
+  line-height: 45px;
+  font-weight: 500;
+  color: #000000;
+  text-transform: none;
+}
+.self-advertising h4 {
+  font-family: RobotoBold, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 700;
+  color: #000000;
+}
+.self-advertising-rightcolumn-text li,
+.footer-conectiondata p,
+.filter-price label,
+.filter-option label,
+.filter-extra li {
+  font-family: RobotoRegular, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 400;
+  color: #283136;
+  text-transform: none;
+}
+.self-advertising-rightcolumn-text span {
+  font-family: RobotoBold, Arial, sans-serif;
+  font-size: 45px;
+  line-height: 10px;
+  font-weight: 700;
+}
+.footer-conectiondata strong,
+.column-headings .label,
+.filter-type legend,
+.filter-extra legend {
+  font-family: RobotoBold, Arial, sans-serif;
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 700;
+}
+.feedback-item label {
+  font-family: RobotoBold, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 700;
+  color: #283136;
+}
+.footer-social .b {
+  font-family: RobotoBold, Arial, sans-serif;
+  font-size: 36px;
+  line-height: 36px;
+  font-weight: 700;
+  text-transform: none;
+}
+.footer-social p {
+  font-family: RobotoRegular, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 400;
+  color: #444444;
+  text-transform: none;
+}
+.filter-sequencer li {
+font-family: RobotoRegular, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 400;
+}
+.item-title {
+  font-family: RobotoBold, Arial, sans-serif;
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 700;
+}
+.item-description {
+  font-family: RobotoRegular, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 400;
+  color: #666666;
+  text-transform: none;
+}
+
+/* ШРИФТЫ */
+/* ОФОРМЛЕНИЕ МЕНЮ */
+
+
+
+
+/* ОФОРМЛЕНИЕ МЕНЮ */
+
+/* Слайдер в index */
+.slider {
+  position: relative;
+  background-color: #EEEEEE;
 }
 .slider-controls {
   position: absolute;
@@ -196,6 +360,7 @@ a {
   box-shadow: 0 3px rgba(0, 0, 0, 0.1) inset;
 }
 
+/* Слайдер в index */
 
 
 
