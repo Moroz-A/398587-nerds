@@ -40,7 +40,6 @@ body {
   padding: 0;
   clip: rect(0, 0, 0, 0);  
 }
-
 a {
   text-decoration: none;
 }
@@ -71,7 +70,6 @@ a {
 .basket a:focus {
   color: #fb565a;
 }
-
 .container {
   width: 1200px;
   margin: auto;
@@ -126,13 +124,14 @@ h1,
   color: #283136;
 }
 .self-advertising-leftcolumn h3,
-.feedback-form h2 {
+.feedback h2 {
   font-family: RobotoMedium, Arial, sans-serif;
   font-size: 45px;
   line-height: 45px;
   font-weight: 500;
   color: #000000;
   text-transform: none;
+  margin: 0;
 }
 .self-advertising h4 {
   font-family: RobotoBold, Arial, sans-serif;
@@ -142,7 +141,7 @@ h1,
   color: #000000;
 }
 .self-advertising-rightcolumn-text li,
-.footer-conectiondata p,
+.map-block p,
 .filter-price label,
 .filter-option label,
 .filter-extra li {
@@ -159,7 +158,7 @@ h1,
   line-height: 10px;
   font-weight: 700;
 }
-.footer-conectiondata strong,
+.map-block h3,
 .column-headings .label,
 .filter-type legend,
 .filter-extra legend {
@@ -168,14 +167,20 @@ h1,
   line-height: 30px;
   font-weight: 700;
 }
-.feedback-item label {
+.feedback label {
   font-family: RobotoBold, Arial, sans-serif;
   font-size: 16px;
   line-height: 18px;
   font-weight: 700;
   color: #283136;
+  text-transform: none;
 }
-.footer-social .b {
+.feedback label input,
+.feedback label textarea{
+  font-family: RobotoRegular, Arial, sans-serif;
+  font-weight: 400;
+}
+.footer-social .footer-title {
   font-family: RobotoBold, Arial, sans-serif;
   font-size: 36px;
   line-height: 36px;
@@ -210,13 +215,9 @@ font-family: RobotoRegular, Arial, sans-serif;
   color: #666666;
   text-transform: none;
 }
-
 /* ШРИФТЫ */
+
 /* ОФОРМЛЕНИЕ МЕНЮ */
-
-
-
-
 /* ОФОРМЛЕНИЕ МЕНЮ */
 
 /* Слайдер в index */
@@ -229,10 +230,8 @@ font-family: RobotoRegular, Arial, sans-serif;
   left: 50%;
   bottom: 104px;
   z-index: 100;
-  
   width: 160px;
   height: 18px;
-
   text-align: center;
   font-size: 0;
   transform: translateX(-50%);
@@ -243,8 +242,6 @@ font-family: RobotoRegular, Arial, sans-serif;
   width: 18px;
   height: 18px;
   padding: 8px;
-    
-  
   border-radius: 50%;
   cursor: pointer;
 }
@@ -267,39 +264,30 @@ font-family: RobotoRegular, Arial, sans-serif;
   display: none;
   padding: 78px 0 80px 0;
 }
-/*.slider-item:nth-child(1) {
-  display: blo ck;
-}*/
 .slider-item:nth-child(1) {
   background-image: url("../img/index-slide1.png");
   background-repeat: no-repeat;
   background-position: 93% 18px;
 }
-
 .slider-item:nth-child(2) {
   background-image: url("../img/index-slide2.png");
   background-repeat: no-repeat;
   background-position: 100% 0;
 }
-
 .slider-item:nth-child(3) {
   background-image: url("../img/index-slide3.png");
   background-repeat: no-repeat;
   background-position: 100% 20px;
 }
-
 #product-1:checked ~ .slider-list .slider-item:nth-child(1) {
   display: block;
 }
-
 #product-2:checked ~ .slider-list .slider-item:nth-child(2) {
   display: block;
 }
-
 #product-3:checked ~ .slider-list .slider-item:nth-child(3) {
   display: block;
 }
-
 #product-1:checked ~ .slider-controls .slider-controls-item--1::before,
 #product-2:checked ~ .slider-controls .slider-controls-item--2::before,
 #product-3:checked ~ .slider-controls .slider-controls-item--3::before {
@@ -315,7 +303,6 @@ font-family: RobotoRegular, Arial, sans-serif;
   border: 2px solid #c1c1c1;
   border-radius: 50%;
 }
-
 .slider-item h3 {
   max-width: 600px;
   margin: 0;
@@ -324,62 +311,113 @@ font-family: RobotoRegular, Arial, sans-serif;
   line-height: 55px;
   font-weight: 500;
 }
-
 .slider-item p {
   max-width: 430px;
   margin: 0;
   margin-bottom: 38px;
 }
-
 .button {
   display: block;
   width: 240px;
   padding: 13px 0;
-  
   font-size: 16px;
   line-height: 18px;
   color: #ffffff;
   text-transform: uppercase;
   text-align: center;
   text-decoration: none;
-  
   background-color: #fb565a;
   border-radius: 3px;
   border: none;
 }
-
 .button:hover,
 .button:focus {
   background-color: #e74246;
 }
-
 .button:active {
   color: rgba(255, 255, 255, 0.3);
-  
   background-color: #d7373b;
   box-shadow: 0 3px rgba(0, 0, 0, 0.1) inset;
 }
-
 /* Слайдер в index */
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* ВЕРСТКА СКРЫТОЙ ФОРМЫ */
+.feedback {
+  position: fixed;
+  display: block;
+  max-width: 960px;
+  top: 5%;
+  left: 0;
+  right: 0;
+  margin: auto;
+  box-sizing: border-box;
+  padding: 65px 100px 85px;
+  box-shadow: 0 20px 40px 0 rgba(0, 1, 1, .75);
+  background: #FFFFFF;
+  z-index: 1000;
+}
+.feedback h2{
+  margin-bottom: 35px;
+}
+.feedback-close-btn {
+  position: absolute;
+  right: 90px;
+  top: 80px;
+  opacity: .3;
+  display: block;
+  background: url(../img/close-cross.svg) no-repeat center center;
+  width: 20px;
+  height: 20px;
+}
+.feedback-close-btn:hover{
+  opacity: 1;
+}
+.feedback-close-btn:active{
+  opacity: .1;
+}
+.feedback .row {
+  display: flex;
+  justify-content: space-between;
+  margin-left: -30px;
+  margin-bottom: 35px;
+}
+.feedback .row .col{
+  flex: 1;
+  margin-left: 30px;
+}
+.feedback input,
+.feedback textarea {
+  display: block;
+  width: 100%;
+  margin-top: 10px;
+  box-sizing: border-box;
+  padding: 15px;
+  border: solid 2px #d7dcde;
+  border-radius: 2px;
+  outline: none;
+}
+.feedback textarea {
+  width: 100%;
+  margin-bottom: 45px;
+  max-width: 100%;
+  min-width: 100%;
+}
+.feedback input:hover,
+.feedback textarea:hover {
+  border-color: #b4b9bb;
+}
+.feedback input:focus,
+.feedback textarea:focus {
+  border-color: #000000;
+  color: #000000;
+}
+.feedback input.error::placeholder,
+.feedback textarea.error::placeholder,
+.feedback input.error,
+.feedback textarea.error {
+  border-color: #e74246;
+  color: #e74246;
+}
+/* ВЕРСТКА СКРЫТОЙ ФОРМЫ */
 

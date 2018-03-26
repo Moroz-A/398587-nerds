@@ -136,49 +136,65 @@
         </div>
       </section>      
     </main>
-    <footer class="footer">     
-      <section class="footer-conectiondata">
-        <h2 class="visually-hidden">Контактные данные компании "Нердс"</h2>
-        <strong>Nerds design studio</strong>
-        <p>191186, Санк-петербург,<br>ул. Б. Конюшенная, д.19/8<br><br>тел. +7(812)275-75-75</p>
-        <button class="button" type="submit">Напишите нам</button>
-        <!-- Форма "напишите нам" -->
-        <form class="feedback-form" action="#url" method="post">
-          <h2>Напишите нам</h2>
-          <p class="feedback-item">
-            <label for="feedback-name">Ваше имя:</label>
-            <input id="feedback-name" type="text" name="name" value="" placeholder="Имя Фамилия">
-          </p>
-          <p class="feedback-item">
-            <label for="feedback-mail">Ваш email:</label>
-            <input id="feedback-mail" type="email" name="mail" value="" placeholder="email@example.com">
-          </p>
-          <p class="feedback-item">
-            <label for="feedback-message">Текст письма:</label>
-            <textarea id="feedback-message" rows="4" cols="25" name="message" placeholder="В свободной форме"></textarea>
-          </p>
-          <button class="button" type="submit">Отправить</button>
-          <button class="modal-close" type="button">Закрыть</button>
-        </form>
-        <!-- Форма "напишите нам" -->
-      </section>
-      <section class="footer-map">
+    <footer>
+      <div class="map">
         <h2 class="visually-hidden">Как к нам добраться</h2>
-        <div class="footer-img-map">
-          <div>
+        <!--карта, блин-->
+        <div class="map-script"></div>
+        <!--карта-костыль-->
+        <div class="img-map">
             <img src="img/map-marker.jpg" width="1440" height="416" alt="Офиса компании Нередс: Санк-петербург, ул. Б. Конюшенная, д.19/8">
+        </div>
+        <div class="container">
+          <div class="map-block">
+            <h3 class="map-block-title">Nerds design studio</h3>
+            <p class="map-block-info">191186, Санк-петербург,</p>
+            <p class="map-block-info">ул. Б. Конюшенная, д.19/8</p>
+            <p class="map-block-info">тел. +7(812)275-75-75</p>
+            <a href="feedback.html" class="button btn map-btn">Напишите нам</a>
           </div>
         </div>
-      </section>            
-      <div class="footer-social">
-        <p class="b">Давайте дружить, это выгодно!</p>
-        <p>Скидка 10% для друзей из социальных сетей</p> 
-        <ul>
-          <li><a class="social-button" href="#">Вконтакте</a></li>
-          <li><a class="social-button" href="#">Фейсбук</a></li>
-          <li><a class="social-button" href="#">Инстаграм</a></li>
-        </ul>
+      </div>
+      <div class="footer-social container clearfix">
+        <div class="footer-left-column">
+          <a href="#" class="footer-btn footer-btn-vk"></a>
+          <a href="#" class="footer-btn footer-btn-fb"></a>
+          <a href="#" class="footer-btn footer-btn-inst"></a>
+        </div>
+        <section class="footer-right-column">
+          <h2 class="footer-title">Давайте дружить, это выгодно!</h2>
+          <p class="footer-info">Скидка 10% для друзей из социальных сетей.</p>
+        </section>
       </div>
     </footer>
+    <!-- Форма "напишите нам" -->
+      
+      <form class="feedback" action="#" method="post">
+        <h2>Напишите нам</h2>
+        <div class="row">
+          <div class="col">
+            <label>
+              Ваше имя:
+              <input type="text" name="name" placeholder="Имя Фамилия"/>
+            </label>
+          </div>
+          <div class="col">
+            <label>
+              Ваш email:
+              <input type="email" name="email" placeholder="email@example.com"/>
+            </label>
+          </div>
+        </div>
+        <div class="message">
+          <label>
+            Текст письма:
+            <textarea name="message" rows="5" placeholder="В свободной форме"></textarea>
+          </label>
+        </div>
+        <button class="button">Отправить</button>
+        <a href="#" class="feedback-close-btn"></a>
+      </form>
+      
+      <!-- Форма "напишите нам" -->
   </body>
 </html>
