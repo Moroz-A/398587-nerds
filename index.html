@@ -9,7 +9,7 @@
   </head>
   <body>
     <header class="header">
-       <div class="header-block container clearfix">
+       <div class="header-block container">
         <figure class="header-logo">
           <a href="index.html" rel="nofollow">
             <img src="img/nerds-logo.svg"  width="160" height="65" alt="Логотип компании «Нердс»">
@@ -85,7 +85,7 @@
       <section class="self-advertising">
         <h2 class="visually-hidden">Выполняем заказы на разработку: Веб-сайтов, Мобильных приложений, Слайдшоу и видео.</h2>
         <div class="self-advertising-leftcolumn">
-          <div>
+          <div class="motto">
             <h3>Мы - маленькая, но гордая дизайн-студия из Краснодара.</h3>
             <p>Исповедуем приципы минимализма и чистоты. Ставим математический расчет превыше креатива. Работаем не покладая рук, как роботы.</p>
           </div>
@@ -116,56 +116,44 @@
       </section>
       <section class="advertising container">
         <h2 class="visually-hidden">Реклама на сайте компании Нердс</h2>
-        <div>
-          <a class="advertising-blok blok1" href="https://htmlacademy.ru/intensive/htmlcss" target="_blank">
-            <img src="img/logo-1.png" width="199" height="68" alt="Логотип HTML academy">
-          </a>
-        </div>
-        <div>
-          <a class="advertising-blok blok2" href="#" target="_blank">
-            <img src="img/logo-2.png" width="209" height="90" alt="Логотип Borodinski">
-          </a>
-        </div>
-        <div>
-          <a class="advertising-blok blok3" href="#" target="_blank">
-            <img src="img/logo-3.png" width="185" height="52" alt="Логотип Pink">
-          </a>
-        </div>
-        <div>
-          <a class="advertising-blok blok4" href="#" target="_blank">
-            <img src="img/logo-4.png" width="173" height="84" alt="Логотип Mishka">
-          </a>
-        </div>
+        <a class="advertising-blok blok1" href="https://htmlacademy.ru/intensive/htmlcss" target="_blank">
+          <img src="img/logo-1.png" width="199" height="68" alt="Логотип HTML academy">
+        </a>
+        <a class="advertising-blok blok2" href="#" target="_blank">
+          <img src="img/logo-2.png" width="209" height="90" alt="Логотип Borodinski">
+        </a>
+        <a class="advertising-blok blok3" href="#" target="_blank">
+          <img src="img/logo-3.png" width="185" height="52" alt="Логотип Pink">
+        </a>
+        <a class="advertising-blok blok4" href="#" target="_blank">
+          <img src="img/logo-4.png" width="173" height="84" alt="Логотип Mishka">
+        </a>
       </section>      
     </main>
     <footer>
       <div class="map">
-        <h2 class="visually-hidden">Как к нам добраться</h2>
-        <!--карта, блин-->
-        <div class="map-script"></div>
-        <!--карта-костыль-->
-        <div class="img-map">
-            <img src="img/map-marker.jpg" width="1440" height="416" alt="Офиса компании Нередс: Санк-петербург, ул. Б. Конюшенная, д.19/8">
-        </div>
+        <h2 class="visually-hidden">Как к нам добраться: Офиса компании Нередс: Санк-петербург, ул. Б. Конюшенная, д.19/8</h2>
+        <iframe class="map-script" src="https://yandex.ru/map-widget/v1/?um=constructor%3Adf2fb8f2e39f8646bbb88508b58f5d2da7469fd56c5a8c43e872352237a4186b&amp;source=constructor" width="100%" height="420" frameborder="0"></iframe>
         <div class="container">
           <div class="map-block">
-            <h3 class="map-block-title">Nerds design studio</h3>
-            <p class="map-block-info">191186, Санк-петербург,</p>
-            <p class="map-block-info">ул. Б. Конюшенная, д.19/8</p>
-            <p class="map-block-info">тел. +7(812)275-75-75</p>
+            <h3 class="map-block-title">NЁrds design studio</h3>
+            <p class="map-block-info">191186, Санк-петербург, <br>ул. Б. Конюшенная, д.19/8</p>
+            <a class="map-block-info" href="tel:+78122757575">тел. +7(812)275-75-75</a>
             <a href="feedback.html" class="button btn map-btn">Напишите нам</a>
           </div>
         </div>
       </div>
       <div class="footer-social container clearfix">
         <div class="footer-left-column">
-          <a href="#" class="footer-btn footer-btn-vk"></a>
-          <a href="#" class="footer-btn footer-btn-fb"></a>
-          <a href="#" class="footer-btn footer-btn-inst"></a>
+          <a href="#" class="footer-btn"><img src="img/vk-icon.svg" alt="vk social" width="26" height="15"></a>
+          <a href="#" class="footer-btn"><img src="img/fb-icon.svg" alt="fb social" width="12" height="22"></a>
+          <a href="#" class="footer-btn"><img src="img/insta-icon.svg" alt="in social" width="21" height="21"></a>
         </div>
         <section class="footer-right-column">
-          <h2 class="footer-title">Давайте дружить, это выгодно!</h2>
-          <p class="footer-info">Скидка 10% для друзей из социальных сетей.</p>
+          <div>
+            <h2 class="footer-title">Давайте дружить, это выгодно!</h2>
+            <p class="footer-info">Скидка 10% для друзей из социальных сетей.</p>
+          </div>
         </section>
       </div>
     </footer>
