@@ -25,7 +25,6 @@
       </div>
       <h1 class="page-title container">Магазин готовых шаблонов</h1>
     </header>
-    
     <main class="container">
       <div class="column-headings">
         <div class="label-price">Стоимость:</div>
@@ -36,19 +35,13 @@
             <fieldset class="filter-nav">
               <ul>
                 <li class="filter-option-sequencer">
-                  <a href="" class="button-price">
-                  По цене
-                  </a>
+                  <a href="#" class="button-price">По цене</a>
                 </li>
                 <li class="filter-option-sequencer">
-                 <a href="" class="button-type">
-                  По типу
-                  </a>
+                  <a href="#" class="button-type">По типу</a>
                 </li>
                 <li class="filter-option-sequencer">
-                  <a href="" class="button-appointment">
-                  По назначению
-                  </a>
+                  <a href="#" class="button-appointment">По названию</a>
                 </li>
               </ul>
             </fieldset>
@@ -65,7 +58,6 @@
           </form>
         </div>
       </div>
-      
       <div class="catalog-container">
         <section class="filters-left">
           <h2 class="visually-hidden">Фильтр товаров</h2>
@@ -86,13 +78,10 @@
                 <div class="filter-price-from">
                   <label for="from">От</label>
                   <input type="number" min="1" max="15000" id="from" name="from" value="0">
-                  
                 </div>
                 <div class="filter-price-till">
-                  
-                   <label for="till">До</label> 
+                  <label for="till">До</label> 
                   <input type="number" min="1000" max="15000" id="till" name="till" value="15000">
-                 
                 </div>
               </div>
             </div>
@@ -125,7 +114,7 @@
                   <label for="filter-benefit-block">Блок преимуществ</label>
                 </li>
                 <li class="filter-option">
-                  <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="news" id="filter-news">
+                  <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="news" id="filter-news" checked>
                   <label for="filter-news">Новости</label>
                 </li>
                 <li class="filter-option">
@@ -133,12 +122,12 @@
                   <label for="filter-gallery">Галерея</label>
                 </li>
                 <li class="filter-option">
-                  <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="basket" id="filter-basket" checked>
+                  <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="basket" id="filter-basket">
                   <label for="filter-basket">Корзина</label>
                 </li>
               </ul>
             </fieldset>
-            <button type="submit" class="filter-button">Показать</button>
+            <button type="submit" class="filter-button button">Показать</button>
           </form>
         </section>
         <section class="catalog">
@@ -164,7 +153,7 @@
               <!--Выпадающий список - заявка-->
               <ul class="visible-in-hovard">
                 <li class="item-title">Pinck up</li>
-                <li class="item-description">Продуктовый лендинг<br>приложения для iOS и Android</li>
+                <li class="item-description">Продуктовый лендинг приложения для iOS и Android</li>
                 <li class="button-add-to-basket"><button class="button">9&#160;900&#160;руб</button></li>
               </ul>
             </div>
@@ -176,7 +165,7 @@
               <!--Выпадающий список - заявка-->
               <ul class="visible-in-hovard">
                 <li class="item-title">Barbershop</li>
-                <li class="item-description">Интернет-магазин<br>Для мужчин, да.</li>
+                <li class="item-description">Сайт салоны красоты. Для мужчин, да.</li>
                 <li class="button-add-to-basket"><button class="button">9&#160;900&#160;руб</button></li>
               </ul>
             </div>
@@ -187,8 +176,8 @@
               </a>
               <!--Выпадающий список - заявка-->
               <ul class="visible-in-hovard">
-                <li class="item-title">Sedona</li>
-                <li class="item-description">Информационный сайт<br>для туристов</li>
+                <li class="item-title">Mishka</li>
+                <li class="item-description">Интернет-магазин для туристов</li>
                 <li class="button-add-to-basket"><button class="button">9&#160;900&#160;руб</button></li>
               </ul>
             </div>
@@ -199,8 +188,8 @@
               </a>
               <!--Выпадающий список - заявка-->
               <ul class="visible-in-hovard">
-                <li class="item-title">Sedona</li>
-                <li class="item-description">Информационный сайт<br>для туристов</li>
+                <li class="item-title">A Plus</li>
+                <li class="item-description">Лендинг курсов повышения квалификации</li>
                 <li class="button-add-to-basket"><button class="button">9&#160;900&#160;руб</button></li>
               </ul>
             </div>
@@ -211,25 +200,25 @@
               </a>
               <!--Выпадающий список - заявка-->
               <ul class="visible-in-hovard">
-                <li class="item-title">Sedona</li>
-                <li class="item-description">Информационный сайт<br>для туристов</li>
+                <li class="item-title">Кваст</li>
+                <li class="item-description">Промо-сайт производителя крафтового кваса</li>
                 <li class="button-add-to-basket"><button class="button">9&#160;900&#160;руб</button></li>
               </ul>
             </div>
           </div>
           <ul class="catalog-pagination">
-            <li class="pagination"><a href="#">1</a></li>
-            <li class="pagination pagination-current"><a>2</a></li>
-            <li class="pagination"><a href="#">3</a></li>
-            <li class="pagination"><a href="#">Следующая</a></li>
+            <li><a href="#">1</a></li>
+            <li class="current"><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">Следующая</a></li>
           </ul>
         </section>
       </div>
     </main>
-     <footer>
+    <footer>
       <div class="map">
         <h2 class="visually-hidden">Как к нам добраться: Офиса компании Нередс: Санк-петербург, ул. Б. Конюшенная, д.19/8</h2>
-        <iframe class="map-script" src="https://yandex.ru/map-widget/v1/?um=constructor%3Adf2fb8f2e39f8646bbb88508b58f5d2da7469fd56c5a8c43e872352237a4186b&amp;source=constructor" width="100%" height="420" frameborder="0"></iframe>
+        <iframe class="map-script" src="https://yandex.ru/map-widget/v1/?um=constructor%3Adf2fb8f2e39f8646bbb88508b58f5d2da7469fd56c5a8c43e872352237a4186b&amp;source=constructor" width="500" height="420"></iframe>
         <div class="container">
           <div class="map-block">
             <h3 class="map-block-title">NЁrds design studio</h3>
@@ -255,30 +244,31 @@
     </footer>
     <!-- Форма "напишите нам" -->
     <form class="feedback" action="#" method="post">
-        <h2>Напишите нам</h2>
-        <div class="row">
-          <div class="col">
-            <label>
-              Ваше имя:
-              <input type="text" name="name" placeholder="Имя Фамилия"/>
-            </label>
-          </div>
-          <div class="col">
-            <label>
-              Ваш email:
-              <input type="email" name="email" placeholder="email@example.com"/>
-            </label>
-          </div>
-        </div>
-        <div class="message">
+      <h2>Напишите нам</h2>
+      <div class="row">
+        <div class="col">
           <label>
-            Текст письма:
-            <textarea name="message" rows="5" placeholder="В свободной форме"></textarea>
+            Ваше имя:
+            <input type="text" name="name" placeholder="Имя Фамилия">
           </label>
         </div>
-        <button class="button">Отправить</button>
-        <a href="#" class="feedback-close-btn"></a>
-      </form>
+        <div class="col">
+          <label>
+            Ваш email:
+            <input type="email" name="email" placeholder="email@example.com">
+          </label>
+        </div>
+      </div>
+      <div class="message">
+        <label>
+          Текст письма:
+          <textarea name="message" rows="5" placeholder="В свободной форме"></textarea>
+        </label>
+      </div>
+      <button class="button">Отправить</button>
+      <a href="#" class="feedback-close-btn"></a>
+    </form>
     <!-- Форма "напишите нам" -->
+    <script src="js/script.js"></script>
   </body>
 </html>

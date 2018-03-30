@@ -1,26 +1,25 @@
 @charset "utf-8";
 @font-face {
-    font-family: RobotoRegular;
-    src: url("../fonts/roboto.woff2") format("woff2"), url("../fonts/roboto.woff") format("woff"),
-    url("../fonts/Roboto-Regular.ttf") format("truetype");
-    font-weight: normal;
-    font-style: normal;
+  font-family: RobotoRegular;
+  src: url("../fonts/roboto.woff2") format("woff2"), url("../fonts/roboto.woff") format("woff"),
+  url("../fonts/Roboto-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
 }
 @font-face {
-    font-family: RobotoMedium;
-    src: url("../fonts/robotomedium.woff2") format("woff2"), url("../fonts/robotomedium.woff") format("woff"),
-    url("../fonts/Roboto-Medium.ttf") format("truetype");
-    font-weight: normal;
-    font-style: normal;
+  font-family: RobotoMedium;
+  src: url("../fonts/robotomedium.woff2") format("woff2"), url("../fonts/robotomedium.woff") format("woff"),
+  url("../fonts/Roboto-Medium.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
 }
 @font-face {
-    font-family: RobotoBold;
-    src: url("../fonts/robotobold.woff2") format("woff2"), url("../fonts/robotobold.woff") format("woff"),
-    url("../fonts/Roboto-Bold.ttf") format("truetype");
-    font-weight: normal;
-    font-style: normal;
+  font-family: RobotoBold;
+  src: url("../fonts/robotobold.woff2") format("woff2"), url("../fonts/robotobold.woff") format("woff"),
+  url("../fonts/Roboto-Bold.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
 }
-
 /* ГЛОБАЛЬНЫЕ НАСТРОЙКИ */
 body {
   margin: 0;
@@ -77,7 +76,6 @@ a {
 /* ГЛОБАЛЬНЫЕ НАСТРОЙКИ */
 
 /* ШРИФТЫ */
-
 .site-navigation a,
 a.basket,
 .filter-button {
@@ -108,7 +106,8 @@ h1,
   text-transform: none;
 }
 .button,
-.pagination-item a {
+.pagination-item a,
+.catalog-pagination {
   font-family: RobotoMedium, Arial, sans-serif;
   font-size: 16px;
   line-height: 18px;
@@ -128,6 +127,12 @@ h1,
   font-size: 18px;
   line-height: 18px;
   font-weight: 700;
+}
+.filter-option-sequencer a {
+  font-family: RobotoRegular, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 400;
 }
 .self-advertising-leftcolumn h3,
 .feedback h2 {
@@ -150,7 +155,8 @@ h1,
 .map-block p,
 .filter-price label,
 .filter-option label,
-.filter-extra li {
+.filter-extra li,
+a.map-block-info {
   font-family: RobotoRegular, Arial, sans-serif;
   font-size: 16px;
   line-height: 18px;
@@ -184,6 +190,8 @@ h1,
 .feedback label input,
 .feedback label textarea{
   font-family: RobotoRegular, Arial, sans-serif;
+  font-size: 16px;/*?*/
+  line-height: 22px;
   font-weight: 400;
 }
 .footer-social .footer-title {
@@ -222,7 +230,6 @@ font-family: RobotoRegular, Arial, sans-serif;
   text-transform: none;
 }
 /* ШРИФТЫ */
-
 
 /* ОФОРМЛЕНИЕ МЕНЮ */
 .header {
@@ -283,10 +290,7 @@ a.basket:focus {
 }
 .site-navigation a:active,
 a.basket:active {
-  opacity: .3;
-}
-a.basket:active:before {/*эта херня не сработала, корзина опасится*/
-  opacity: 1;
+  color: #bdbdbd;
 }
 /* ОФОРМЛЕНИЕ МЕНЮ */
 
@@ -399,6 +403,7 @@ a.basket:active:before {/*эта херня не сработала, корзи�
   background-color: #fb565a;
   border-radius: 3px;
   border: none;
+  outline: none;
 }
 .button:hover,
 .button:focus {
@@ -410,7 +415,6 @@ a.basket:active:before {/*эта херня не сработала, корзи�
   box-shadow: 0 3px rgba(0, 0, 0, 0.1) inset;
 }
 /* СЛАЙДЕР В index */
-
 
 /* СЕКЦИЯ СЕРВИС */
 .service {
@@ -549,11 +553,9 @@ a.basket:active:before {/*эта херня не сработала, корзи�
   border-right: none;
   margin: 0;
 }
-
 /* СЕКЦИЯ advertising */
 
-/* ============ Страница каталог ============================ */
-
+/* ============ СТРАНИЦА catalog ============================ */
 .catalog-header {
   height: 355px;
 }
@@ -561,9 +563,7 @@ h1.page-title {
   text-align: center;
   margin-top: 80px;
 }
-
-
-/* header filtr*/
+/* header filter */
 .column-headings,
 .filter-sequencer {
   display: flex;
@@ -597,10 +597,7 @@ h1.page-title {
   margin: 0;
 }
 .filter-sequencer a {
-  font-size: 14px;
-  
-  line-height: 14px;
-  margin-right: 30px;
+  margin-right: 23px;
 }
 .filter-nav {
   flex: 1;
@@ -608,8 +605,22 @@ h1.page-title {
 .filter-arrow a {
   margin: 0 0 0 20px;
 }
-/* header filtr*/
-
+.filter-option-sequencer a,
+.filter-option-sequencer a {
+  opacity: .3;
+}
+.filter-option-sequencer a:hover,
+.filter-option-sequencer a:focus {
+  opacity: .6;
+}
+.filter-option-sequencer a:active {
+  opacity: 1;
+}
+a.button-price,
+a.button-appointment-down {
+  opacity: 1;
+}
+/* header filter */
 
 /* left filter */
 .catalog-container {
@@ -630,10 +641,31 @@ h1.page-title {
   padding: 0;
   margin: 0;
 }
+.filter-price-from input,
+.filter-price-till input {
+  width: 80px;
+  height: 40px;
+  margin-top: 15px;
+  margin-left: 15px;
+  text-align: center;
+  background-color: #eeeeee;
+  border-radius: 3px;
+  border: none;
+}
+fieldset.filter-type,
+fieldset.filter-extra {
+  margin-top: 50px;
+}
+li.filter-option {
+  margin-top: 20px;
+}
 .filters-left .row {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+}
+.row label {
+  text-transform: uppercase;
 }
 .input-range {
   width: 260px;
@@ -684,9 +716,39 @@ h1.page-title {
   background: url(../img/radio-on.svg) no-repeat left center;
   background-size: contain;
 }
+.filter-extra input[type="checkbox"] + label {
+  background: url(../img/checkbox-off.svg) no-repeat left center;
+  background-size: contain;
+  padding-left: 30px;
+  width: 23px;
+  height: 23px;
+  cursor: pointer;
+}
+.filter-extra input[type="checkbox"]:checked + label {
+  background: url(../img/checkbox-on.svg) no-repeat left center;
+  background-size: contain;
+}
+button.filter-button {
+  margin-top: 55px;
+  background-color: #eeeeee;
+  font-family: RobotoMedium, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 500;
+  color: #000000;
+}
+button.filter-button:hover,
+button.filter-button:focus {
+  background-color: #dfdfdf;
+}
+button.filter-button:active {
+  color: rgba(255, 255, 255, 0.3);
+  background-color: #d5d5d5;
+  box-shadow: 0 3px rgba(0, 0, 0, 0.1) inset;
+}
 /* left filter */
-/* каталог майн*/
 
+/* КАТАЛОГ */
 .catalog-container .catalog {
   flex: 1;
 }
@@ -725,6 +787,9 @@ h1.page-title {
   opacity: 1;
   cursor: auto;
 }
+.button-add-to-basket:hover {
+  cursor: auto;
+}
 .catalog-item .button {
   width: 100%;
   padding: 13px 15px;
@@ -735,12 +800,56 @@ h1.page-title {
 .catalog-item .item-description {
   margin: 20px 0 30px;
 }
-
-/* каталог майн*/
-
-
-
-/* ============ Страница каталог ============================ */
+.catalog-pagination {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  padding-left: 0;
+  margin: 0;
+  color: #000000;
+}
+.catalog-pagination li {
+  width: 50px;
+  height: 50px;
+  margin-right: 11px;
+  line-height: 50px;
+  border: solid 2px #eeeeee;
+  background-color: #eeeeee;
+  text-align: center;
+  box-sizing: border-box;
+  overflow: hidden;
+  border-radius: 2px;
+  transition: all .3s ease;
+  user-select: none;
+}
+.catalog-pagination a {
+  display: block;
+}
+.catalog-pagination li:last-child{
+  width: 260px;
+}
+.catalog-pagination li:hover,
+.catalog-pagination li:focus {
+  border-color: #dfdfdf;
+  background-color: #dfdfdf;
+  color: #959595;
+}
+.catalog-pagination li:active {
+  border-color: #d5d5d5;
+  box-shadow: inset 0 3px 0 0 rgba(1,1,0,.1);
+  background-color: #d5d5d5;
+}
+.catalog-pagination li.current {
+  border-color: #dbdbdb;
+  background-color: transparent;
+  cursor: default;
+}
+.catalog-pagination li.current:active {
+  box-shadow: none;
+}
+/* КАТАЛОГ */
+/* ============ СТРАНИЦА catalog ============================ */
 
 /* КАРТА */
 .map {
@@ -765,6 +874,10 @@ h1.page-title {
 }
 .map-block a {
   text-transform: none;
+}
+.map iframe {
+  width: 100%;
+  border: none;
 }
 /* КАРТА */
 
@@ -795,7 +908,6 @@ h1.page-title {
 .footer-btn:focus {
   background-color: #fb565a;
 }
-
 .footer-btn:active {
   background-color: #d7373b;
 }
@@ -816,7 +928,7 @@ h1.page-title {
 }
 /* ФУТЕР */
 
-/* ВЕРСТКА СКРЫТОЙ ФОРМЫ */
+/* СКРЫТАЯ ФОРМА */
 .feedback {
   position: fixed;
   display: none;
@@ -830,6 +942,10 @@ h1.page-title {
   box-shadow: 0 20px 40px 0 rgba(0, 1, 1, .75);
   background: #FFFFFF;
   z-index: 1000;
+}
+.modal-visible {
+  display: block;
+  animation: showform .5s ease;
 }
 .feedback h2{
   margin-bottom: 35px;
@@ -886,13 +1002,32 @@ h1.page-title {
   border-color: #000000;
   color: #000000;
 }
-.feedback input.error::placeholder,
-.feedback textarea.error::placeholder,
+.feedback input.error:placeholder,
+.feedback textarea.error:placeholder,
 .feedback input.error,
 .feedback textarea.error {
   border-color: #e74246;
   color: #e74246;
 }
-/* ВЕРСТКА СКРЫТОЙ ФОРМЫ */
+.feedback input:invalid,
+.feedback textarea:invalid {
+  border-color: #e74246;
+  color: #e74246;
+}
+@keyframes showform {
+  0% {
+      transform: translateY(-2000px);
+  }
+  70% {
+      transform: translateY(30px);
+  }
+  90% {
+      transform: translateY(-10px);
+  }
+  100% {
+      transform: translateY(0);
+  }
+}
+/* СКРЫТАЯ ФОРМА */
 
 
