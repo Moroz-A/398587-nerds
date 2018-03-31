@@ -68,7 +68,7 @@ a {
   color: #fb565a;
 }
 .container {
-  max-width: 1200px;
+  width: 1200px;
   margin: auto;
   padding: 0 20px;
   box-sizing: border-box;
@@ -257,6 +257,7 @@ font-family: RobotoRegular, Arial, sans-serif;
   font-size: 16px;
   border-bottom: solid 2px transparent;
   padding-bottom: 10px;
+  vertical-align: baseline;
 }
 .header a.basket {
   border-bottom: solid 2px transparent;
@@ -313,6 +314,7 @@ a.basket:active {
 .slider-controls label {
   position: relative;
   display: inline-block;
+  vertical-align: baseline;
   width: 18px;
   height: 18px;
   padding: 8px;
@@ -504,6 +506,7 @@ a.basket:active {
 }
 .self-advertising-rightcolumn-text li {
   display: inline-block;
+  vertical-align: baseline;
   justify-content: space-between;
   padding-right: 5px;
   align-items: flex-start;
@@ -559,7 +562,7 @@ a.basket:active {
 .catalog-header {
   height: 355px;
 }
-h1.page-title {
+.page-title {
   text-align: center;
   margin-top: 80px;
 }
@@ -680,10 +683,11 @@ li.filter-option {
 .input-range .line {
   position: relative;
   display: inline-block;
+  vertical-align: baseline;
   width: 220px;
   height: 2px;
   margin: 0 auto;
-  background-color: #d7dcde;
+  background-color: #d7dcde;  
 }
 .input-range .progress {
   width: 70%;
@@ -700,6 +704,7 @@ li.filter-option {
   height: 20px;
   background: url(../img/filter-button.svg) no-repeat center center;
   background-size: contain;
+  cursor: pointer;
 }
 .input-range .to {
   left: 70%;
@@ -728,7 +733,7 @@ li.filter-option {
   background: url(../img/checkbox-on.svg) no-repeat left center;
   background-size: contain;
 }
-button.filter-button {
+.filter-button {
   margin-top: 55px;
   background-color: #eeeeee;
   font-family: RobotoMedium, Arial, sans-serif;
@@ -781,6 +786,7 @@ button.filter-button:active {
   opacity: 0;
   transition: all .5s ease;
   text-align: center;
+  word-break: break-all;
 }
 .catalog-item:hover .visible-in-hovard,
 .catalog-item:hover .add {
@@ -798,7 +804,7 @@ button.filter-button:active {
   width: auto;
 }
 .catalog-item .item-description {
-  margin: 20px 0 30px;
+  margin: 20px -15px 30px;
 }
 .catalog-pagination {
   display: flex;
@@ -891,6 +897,7 @@ button.filter-button:active {
 }
 .footer-btn {
   display: inline-block;
+  vertical-align: baseline;
   width: 80px;
   height: 80px;
   line-height: 80px;
