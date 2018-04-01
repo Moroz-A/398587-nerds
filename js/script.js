@@ -9,4 +9,3 @@ btnCloseForm.addEventListener('click', function(event){
   event.preventDefault();
   modalForm.classList.remove('modal-visible');
 });
-  
