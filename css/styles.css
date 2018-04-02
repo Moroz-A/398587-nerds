@@ -20,7 +20,6 @@
   font-weight: normal;
   font-style: normal;
 }
-/* ГЛОБАЛЬНЫЕ НАСТРОЙКИ */
 body {
   margin: 0;
   padding: 0;
@@ -68,15 +67,13 @@ a {
   color: #fb565a;
 }
 .container {
-  width: 1200px;
+  max-width: 1200px;
+  min-width: 1160px;
   margin: auto;
   padding: 0 20px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
-/* ГЛОБАЛЬНЫЕ НАСТРОЙКИ */
-
-/* ШРИФТЫ */
 .site-navigation a,
 a.basket,
 .filter-button {
@@ -189,9 +186,10 @@ a.map-block-info {
   text-transform: none;
 }
 .feedback label input,
-.feedback label textarea{
+.feedback label textarea,
+.filter-price-from input {
   font-family: RobotoRegular, Arial, sans-serif;
-  font-size: 16px;/*?*/
+  font-size: 16px;
   line-height: 22px;
   font-weight: 400;
 }
@@ -230,14 +228,12 @@ font-family: RobotoRegular, Arial, sans-serif;
   color: #666666;
   text-transform: none;
 }
-/* ШРИФТЫ */
-
-/* ОФОРМЛЕНИЕ МЕНЮ */
 .header {
   background-color: #eeeeee;
+  padding-top: 47px;
 }
 .header-logo {
-  margin-left: 0;
+  margin: 0;
 }
 .header .header-block {
   display: -webkit-box;
@@ -258,12 +254,12 @@ font-family: RobotoRegular, Arial, sans-serif;
           flex: 1;
   text-align: center;
   font-size: 0;
-  margin-left: -120px;
-  margin-bottom: -10px;
+  margin-left: -88px;
+  margin-bottom: -26px;
 }
 .site-navigation a {
   display: inline-block;
-  margin-left: 50px;
+  margin-left: 46px;
   font-size: 16px;
   border-bottom: solid 2px transparent;
   padding-bottom: 10px;
@@ -272,7 +268,7 @@ font-family: RobotoRegular, Arial, sans-serif;
 .header a.basket {
   border-bottom: solid 2px transparent;
   padding-bottom: 10px;
-  margin-bottom: -10px;
+  margin-bottom: -26px;
 }
 .header .current {
   border-color: #fb565a;
@@ -303,9 +299,6 @@ a.basket:focus {
 a.basket:active {
   color: #bdbdbd;
 }
-/* ОФОРМЛЕНИЕ МЕНЮ */
-
-/* СЛАЙДЕР В index */
 .slider {
   position: relative;
   background-color: #EEEEEE;
@@ -350,7 +343,7 @@ a.basket:active {
 }
 .slider-item {
   display: none;
-  padding: 78px 0 80px 0;
+  padding: 75px 0 80px 0;
 }
 .slider-item:nth-child(1) {
   background-image: url("../img/index-slide1.png");
@@ -407,7 +400,7 @@ a.basket:active {
 .button {
   display: block;
   width: 240px;
-  padding: 13px 0;
+  padding: 15px 0;
   font-size: 16px;
   line-height: 18px;
   color: #ffffff;
@@ -429,9 +422,6 @@ a.basket:active {
   -webkit-box-shadow: 0 3px rgba(0, 0, 0, 0.1) inset;
           box-shadow: 0 3px rgba(0, 0, 0, 0.1) inset;
 }
-/* СЛАЙДЕР В index */
-
-/* СЕКЦИЯ СЕРВИС */
 .service {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -445,16 +435,20 @@ a.basket:active {
           align-items: flex-start;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  padding: 80px 0;
+  padding: 80px 0 93px 0;
 }
 .service article {
   max-width: 300px;
 }
 .offered-service p {
   max-width: 250px;
+  margin-top: -6px;
 }
 .service .button {
   width: 160px;
+  position: relative;
+  top: 17px;
+  padding: 15px 0;
 }
 .app-site .button {
   background-color: #00ca74;
@@ -482,9 +476,6 @@ a.basket:active {
   -webkit-box-shadow: 0 3px rgba(0, 0, 0, 0.1) inset;
           box-shadow: 0 3px rgba(0, 0, 0, 0.1) inset;
 }
-/* СЕКЦИЯ СЕРВИС */
-
-/* СЕКЦИЯ self-advertising */
 .self-advertising {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -492,7 +483,8 @@ a.basket:active {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 40px 0;
+  margin-top: 12px;
+  padding: 30px 0 30px 0;
   border-bottom: solid 2px #eeeeee;
   border-top: solid 2px #eeeeee;
 }
@@ -506,14 +498,13 @@ a.basket:active {
   margin-top: 40px;
   margin-bottom: 36px;
 }
-
 .self-advertising-leftcolumn p {
   width: 615px;
-  margin: 20px 0;
+  margin: 36px 0 20px 0;
 }
 .self-advertising-leftcolumn li {
   position: relative;
-  padding-bottom: 13px;
+  padding-bottom: 25px;
 }
 .self-advertising-leftcolumn li:before {
   position: absolute;
@@ -525,6 +516,8 @@ a.basket:active {
 }
 .self-advertising-rightcolumn-text h4 {
   text-align: center;
+  margin-top: 37px;
+  margin-bottom: 39px;
 }
 .self-advertising-rightcolumn-text ul {
   padding: 0;
@@ -538,7 +531,8 @@ a.basket:active {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding-right: 5px;
+  padding-right: 13px;
+  line-height: 22px;
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
@@ -549,22 +543,19 @@ a.basket:active {
   display: block;
   margin: 20px 0 10px;
 }
-/* СЕКЦИЯ self-advertising */
-
-/* СЕКЦИЯ advertising */
 .advertising {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: space-around;
+      -ms-flex-pack: space-around;
+          justify-content: space-around;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  padding:  40px 0;
+  padding:  50px 0;
   border-bottom: solid 2px #eeeeee;
 }
 .advertising a {
@@ -589,24 +580,20 @@ a.basket:active {
   opacity: .2;
   height: 55px;
   vertical-align: middle;
-  margin: 0 50px;
+  margin: 0 30px;
 }
 .advertising .blok4:after {
   content: "";
   border-right: none;
   margin: 0;
 }
-/* СЕКЦИЯ advertising */
-
-/* ============ СТРАНИЦА catalog ============================ */
 .catalog-header {
-  height: 355px;
+  padding: 100px 0 100px 0;
 }
 .page-title {
   text-align: center;
   margin-top: 80px;
 }
-/* header filter */
 .column-headings,
 .filter-sequencer {
   display: -webkit-box;
@@ -618,6 +605,7 @@ a.basket:active {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+  margin-top: 5px;
 }
 .column-headings .label-price {
   width: 260px;
@@ -677,9 +665,6 @@ a.button-price,
 a.button-appointment-down {
   opacity: 1;
 }
-/* header filter */
-
-/* left filter */
 .catalog-container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -715,12 +700,14 @@ a.button-appointment-down {
   border-radius: 3px;
   border: none;
 }
-fieldset.filter-type,
+fieldset.filter-type{
+  margin-top: 55px;
+}
 fieldset.filter-extra {
-  margin-top: 50px;
+  margin-top: 28px;
 }
 li.filter-option {
-  margin-top: 20px;
+  margin-bottom: 18px;
 }
 .filters-left .row {
   display: -webkit-box;
@@ -776,32 +763,38 @@ li.filter-option {
 .input-range .to {
   left: 70%;
 }
-.filter-type input[type="radio"] + label {
+.filters-left legend{
+  margin: 1px 0 9px 0;
+}
+.filters-left input[type="radio"] + label {
+  display: block;
   background: url(../img/radio-off.svg) no-repeat left center;
   background-size: contain;
-  padding-left: 30px;
-  width: 20px;
-  height: 20px;
+  padding-left: 35px;
+  height: 23px;
+  line-height: 23px;
   cursor: pointer;
 }
-.filter-type input[type="radio"]:checked + label {
+.filters-left input[type="radio"]:checked + label {
   background: url(../img/radio-on.svg) no-repeat left center;
   background-size: contain;
 }
-.filter-extra input[type="checkbox"] + label {
+.filters-left input[type="checkbox"] + label {
+  display: block;
   background: url(../img/checkbox-off.svg) no-repeat left center;
   background-size: contain;
-  padding-left: 30px;
-  width: 23px;
+  padding-left: 35px;
   height: 23px;
+  line-height: 23px;
   cursor: pointer;
 }
-.filter-extra input[type="checkbox"]:checked + label {
+.filters-left input[type="checkbox"]:checked + label {
   background: url(../img/checkbox-on.svg) no-repeat left center;
   background-size: contain;
 }
 .filter-button {
-  margin-top: 55px;
+  width: 260px;
+  margin-top: 28px;
   background-color: #eeeeee;
   font-family: RobotoMedium, Arial, sans-serif;
   font-size: 16px;
@@ -819,9 +812,6 @@ button.filter-button:active {
   -webkit-box-shadow: 0 3px rgba(0, 0, 0, 0.1) inset;
           box-shadow: 0 3px rgba(0, 0, 0, 0.1) inset;
 }
-/* left filter */
-
-/* КАТАЛОГ */
 .catalog-container .catalog {
   -webkit-box-flex: 1;
       -ms-flex: 1;
@@ -849,6 +839,9 @@ button.filter-button:active {
   position: relative;
   margin-bottom: 40px;
   line-height: 0;
+}
+.catalog-item {
+  margin-bottom: 35px;
 }
 .catalog-item .add {
   opacity: .12;
@@ -900,6 +893,7 @@ button.filter-button:active {
   padding-left: 0;
   margin: 0;
   color: #000000;
+  margin-bottom: -14px;
 }
 .catalog-pagination li {
   width: 50px;
@@ -948,10 +942,6 @@ button.filter-button:active {
   -webkit-box-shadow: none;
           box-shadow: none;
 }
-/* КАТАЛОГ */
-/* ============ СТРАНИЦА catalog ============================ */
-
-/* КАРТА */
 .map {
   position: relative;
   margin-top: 80px;
@@ -967,10 +957,19 @@ button.filter-button:active {
   top: 50px;
   background-color: #ffffff;
   padding: 50px;
+  overflow: auto;
+  width: 320px;
+  box-sizing: border-box;
+}
+.map-block-title {
+  margin: 0;
+}
+.map-block-info {
+  margin-top: 24px;
 }
 .map-btn {
   width: auto;
-  margin-top: 25px;
+  margin-top: 39px;
 }
 .map-block a {
   text-transform: none;
@@ -979,9 +978,6 @@ button.filter-button:active {
   width: 100%;
   border: none;
 }
-/* КАРТА */
-
-/* ФУТЕР */
 .footer-social {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -993,7 +989,11 @@ button.filter-button:active {
       -ms-flex-align: center;
           align-items: center;
   font-size: 0;
-  padding: 70px 0;
+  padding: 58px 0;
+}
+.footer-left-column{
+  margin-left: 20px;
+  font-size: 0;
 }
 .footer-btn {
   display: inline-block;
@@ -1004,7 +1004,7 @@ button.filter-button:active {
   border-radius: 50%;
   background: #e1e1e1;
   text-align: center;
-  margin-right: 20px;
+  margin-right: 10px;
   cursor: pointer;
 }
 .footer-btn img {
@@ -1031,6 +1031,7 @@ button.filter-button:active {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin-left: -106px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -1044,9 +1045,6 @@ button.filter-button:active {
 .footer-social .footer-info {
   margin: 10px 0 0;
 }
-/* ФУТЕР */
-
-/* СКРЫТАЯ ФОРМА */
 .feedback {
   position: fixed;
   display: none;
@@ -1178,5 +1176,3 @@ button.filter-button:active {
               transform: translateY(0);
   }
 }
-/* СКРЫТАЯ ФОРМА */
-
