@@ -68,7 +68,7 @@ a {
 }
 .container {
   max-width: 1200px;
-  min-width: 1160px;
+  min-width: 1199px;
   margin: auto;
   padding: 0 20px;
   -webkit-box-sizing: border-box;
